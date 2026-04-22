@@ -75,6 +75,32 @@ def classify_strength(score: int) -> str:
         return "Strong"
     else:
         return "Very Strong"
+    
+    
+def detect_sequences(password: str):
+    findings = []
+    lower = password.lower()
+
+    sequences = [
+        "abcdefghijklmnopqrstuvwxyz",
+        "0123456789"
+    ]
+
+    for seq in sequences:
+        # check forward sequences
+        for i in range(len(seq) - 3):
+            pattern = seq[i:i+4]
+            if pattern in lower:
+                findings.append(f"sequential pattern detected: {pattern}")
+
+        # check reverse sequences
+        rev_seq = seq[::-1]
+        for i in range(len(rev_seq) - 3):
+            pattern = rev_seq[i:i+4]
+            if pattern in lower:
+                findings.append(f"reverse sequential pattern detected: {pattern}")
+
+    return findings
 
 
 def analyze_password(password: str):
@@ -87,6 +113,10 @@ def analyze_password(password: str):
    
     structure_issues = detect_weak_structure(password)
     issues.extend(structure_issues)
+
+    sequence_issues = detect_sequences(password)
+    issues.extend(sequence_issues)
+
 
     score = 0
 
