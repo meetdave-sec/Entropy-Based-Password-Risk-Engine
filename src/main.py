@@ -1,15 +1,19 @@
 from analyzer import analyze_password
 
+
 def main():
-    print("Password Security Analyzer")
-    
+    print("\nPassword Security Analyzer\n")
+
     password = input("Enter password: ")
 
     result = analyze_password(password)
 
-    print("\nResults:")
+    print("\n=== Results ===")
     print(f"Score: {result['score']}/100")
+    print(f"Strength: {result['strength']}")
     print(f"Entropy: {result['entropy']} bits")
+
+    print("\n=== Analysis ===")
 
     if result["issues"]:
         print("Issues detected:")
@@ -17,7 +21,7 @@ def main():
             print(f"- {issue}")
     else:
         print("No major issues detected.")
-      
-        
+
+
 if __name__ == "__main__":
     main()
