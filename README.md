@@ -6,7 +6,7 @@ It simulates how attackers think by identifying predictable human password behav
 
 ---
 
-## 🎯 Security Focus
+## Security Focus
 
 This project is designed from an attacker's perspective.
 
@@ -17,19 +17,19 @@ Instead of simply checking password rules, it models how real-world attackers ev
 
 ---
 
-## 🚀 Features
+## Features
 
-- 📊 Entropy-based password strength estimation  
-- 🧠 Detection of weak patterns (common passwords, keyboard sequences, repeated characters)  
-- 🔁 Sequential pattern detection (e.g., abcd, 1234)  
-- 🏗️ Structure analysis (word + numbers, predictable formats)  
-- 🧾 Risk scoring system (0–100 scale)  
-- 💡 Smart security recommendations  
-- 🎨 Rich CLI output for better readability  
+- Entropy-based password strength estimation  
+- Detection of weak patterns (common passwords, keyboard sequences, repeated characters)  
+- Sequential pattern detection (e.g., abcd, 1234)  
+- Structure analysis (word + numbers, predictable formats)  
+- Risk scoring system (0–100 scale)  
+- Smart security recommendations  
+- Rich CLI output for better readability  
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 ### 1. Entropy Analysis
 Estimates randomness based on character set complexity and password length.
@@ -53,7 +53,7 @@ Final score is calculated using:
 
 ---
 
-## 🖥️ Usage
+## Usage
 
 ```bash
 python -m src.main
@@ -61,7 +61,7 @@ python -m src.main
 
 ---
 
-## 📊 Example Output
+## Example Output
 
 ### Weak Password
 Score: 18/100  
@@ -83,15 +83,15 @@ No major issues detected.
 
 ## 📸 Screenshots
 
-### 🔴 Weak Password Analysis
+### Weak Password Analysis
 ![Weak Password](assets/weak.png)
 
-### 🟢 Strong Password Analysis
+### Strong Password Analysis
 ![Strong Password](assets/strong.png)
 
 ---
 
-## 🧪 Project Structure
+## Project Structure
 
 ```
 src/
@@ -109,7 +109,7 @@ README.md
 
 ---
 
-## 🎯 Why This Project Matters
+## Why This Project Matters
 
 Most password checkers rely on static rule validation (length, digits, symbols).
 
@@ -123,7 +123,7 @@ This makes it closer to real-world security evaluation systems used in defensive
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - Python 3
 - Regex
@@ -132,7 +132,7 @@ This makes it closer to real-world security evaluation systems used in defensive
 
 ---
 
-## 👤 Author
+## Author
 
 Cybersecurity portfolio project focused on password analysis, attacker simulation, and defensive security modeling.
 
